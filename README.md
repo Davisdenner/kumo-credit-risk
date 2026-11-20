@@ -12,7 +12,7 @@ With the same 200 labeled clients, Kumo Small achieved a higher test ROC-AUC tha
 
 ![Equal label budgets first, then XGBoost with 800 additional clients](results/regularization/kumo-vs-xgboost-regularizado.png)
 
-[Data source: UCI Machine Learning Repository — Default of Credit Card Clients](https://archive.ics.uci.edu/dataset/350/default+of+credit+card+clients)
+[Data source: Default of Credit Card Clients (UCI Machine Learning Repository)](https://archive.ics.uci.edu/dataset/350/default+of+credit+card+clients)
 
 [Measurements for each training draw](results/regularization/metrics.csv)
 
@@ -22,7 +22,7 @@ On a fresh holdout, XGBoost with 1,000 labels overtook Kumo with 200 after train
 
 | Model | Labels | Mean training ROC-AUC | Mean test ROC-AUC | Mean test average precision |
 | --- | ---: | ---: | ---: | ---: |
-| Kumo Small | 200 | — | 0.7575 | 0.5197 |
+| Kumo Small | 200 | Not measured | 0.7575 | 0.5197 |
 | XGBoost default | 200 | 1.0000 | 0.7175 | 0.4490 |
 | XGBoost regularized | 200 | 0.9209 | 0.7325 | 0.4783 |
 | XGBoost default | 1,000 | 1.0000 | 0.7424 | 0.4914 |
@@ -96,7 +96,7 @@ With only 200 labeled clients, I would include Kumo Small in an initial credit-r
 
 ![ROC-AUC by model and training sample](results/baseline/kumo-vs-xgboost-padrao.png)
 
-[Data source: UCI Machine Learning Repository — Default of Credit Card Clients](https://archive.ics.uci.edu/dataset/350/default+of+credit+card+clients)
+[Data source: Default of Credit Card Clients (UCI Machine Learning Repository)](https://archive.ics.uci.edu/dataset/350/default+of+credit+card+clients)
 
 Regenerate both figures from the recorded CSV with `python -m kumo_benchmark figures`.
 
