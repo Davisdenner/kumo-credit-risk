@@ -1,0 +1,10 @@
+structured-data-models==0.3.0
+torch==2.11.0
+numpy==2.4.6
+pandas==2.2.3
+scikit-learn==1.6.1
+xgboost==3.2.0
+matplotlib==3.10.0
+xlrd==2.0.2
+pyarrow==19.0.0
+huggingface-hub==2.4.0

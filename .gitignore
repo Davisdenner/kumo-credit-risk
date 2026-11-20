@@ -1,0 +1,7 @@
+.venv/
+.hf/
+.idea/
+data/
+__pycache__/
+runs/
+.venv-check/
