@@ -2,7 +2,7 @@
 
 With the same 200 labeled clients, NVIDIA Kumo Small ranked default risk better than regularized XGBoost in all three training draws (mean ROC-AUC 0.7575 vs. 0.7325). With 800 additional clients, regularized XGBoost reached 0.7771 and beat the 200-label Kumo in two draws.
 
-[View the ROC-AUC chart (Portuguese)](results/regularization/kumo-vs-xgboost-regularizado.png) · [UCI dataset](https://archive.ics.uci.edu/dataset/350/default+of+credit+card+clients) · [Results by draw](results/regularization/metrics.csv) · [Reproduce the benchmark](#reproduce-the-benchmark)
+ROC-AUC chart ([English](results/regularization/kumo-vs-xgboost-regularized-en.png) | [Português](results/regularization/kumo-vs-xgboost-regularizado.png)) · [UCI dataset](https://archive.ics.uci.edu/dataset/350/default+of+credit+card+clients) · [Results by draw](results/regularization/metrics.csv) · [Reproduce the benchmark](#reproduce-the-benchmark)
 
 I-Cheng Yeh's dataset follows 30,000 Taiwanese credit card clients from April through September 2005. The target is default the following month. All three draws share one test set of 6,000 clients from that period. Kumo used 200 context examples throughout.
 
@@ -62,7 +62,7 @@ Within each training draw and budget, eight regularized XGBoost configurations c
 
 In the original experiment, Kumo with 200 labels beat default XGBoost with 1,000 in each draw. The paired ROC-AUC advantage ranged from 0.004 to 0.026. This prompted the regularization follow-up on a fresh holdout.
 
-[View the baseline ROC-AUC chart (Portuguese)](results/baseline/kumo-vs-xgboost-padrao.png)
+Baseline ROC-AUC chart ([English](results/baseline/kumo-vs-xgboost-default-en.png) | [Português](results/baseline/kumo-vs-xgboost-padrao.png))
 
 [Data source: Default of Credit Card Clients (UCI Machine Learning Repository)](https://archive.ics.uci.edu/dataset/350/default+of+credit+card+clients)
 
@@ -86,7 +86,7 @@ Elapsed wall time covers fitting or context preparation and predicting all test 
 | `regularization` | Select regularization on training folds and score the fresh holdout | `runs/regularization/` |
 | `all` | Run both experiments in order | Both run directories |
 | `verify` | Compare both local runs against the reference CSVs (absolute tolerance 0.000001, timings excluded) | Terminal report |
-| `figures` | Redraw the two reference PNGs from their saved CSVs | `results/baseline/` and `results/regularization/` |
+| `figures` | Redraw the English and Portuguese reference PNGs from their saved CSVs | `results/baseline/` and `results/regularization/` |
 
 **Repository layout**
 
